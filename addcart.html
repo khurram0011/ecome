@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.cart-page {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin: 20px;
+}
+
+.cart-banner {
+    flex: 1;
+    min-width: 300px;
+    max-width: 40%;
+    padding: 20px;
+    text-align: center;
+}
+
+.cart-banner img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.cart-container {
+    flex: 2;
+    min-width: 300px;
+    max-width: 60%;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.cart-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.cart-items {
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.cart-item-image {
+    flex: 1;
+    min-width: 100px;
+    max-width: 150px;
+    text-align: center;
+}
+
+.cart-item-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.cart-item-details {
+    flex: 3;
+    min-width: 200px;
+    padding: 20px;
+}
+
+.cart-item-details h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.cart-item-details .price {
+    font-size: 18px;
+    color: #b12704;
+    margin-bottom: 10px;
+}
+
+.quantity {
+    margin-bottom: 10px;
+}
+
+.quantity label {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.quantity input {
+    padding: 5px;
+    font-size: 16px;
+    width: 60px;
+}
+
+.remove-item {
+    padding: 10px 20px;
+    background-color: #d9534f;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.remove-item:hover {
+    background-color: #c9302c;
+}
+
+.cart-summary {
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.cart-summary h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.cart-summary .total-price {
+    font-size: 20px;
+    color: #b12704;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.checkout {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.checkout:hover {
+    background-color: #0056b3;
+}
+
+/* Media Queries for responsiveness */
+
+@media (max-width: 768px) {
+    .cart-page {
+        flex-direction: column;
+    }
+
+    .cart-banner,
+    .cart-container {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .cart-item-image,
+    .cart-item-details {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .cart-summary {
+        padding: 10px;
+        margin-top: 10px;
+    }
+}
+
+</style>
+<body>
+    <div class="cart-page">
+        <div class="cart-banner">
+            <img src="/images/gym-removebg-preview.png" alt="Promotional Banner">
+        </div>
+        <div class="cart-container">
+            <h2>Shopping Cart</h2>
+            <div class="cart-items">
+                <!-- Example cart item -->
+                <div class="cart-item">
+                    <div class="cart-item-image">
+                        <img src="/images/t-shirt-1976334_1280-removebg-preview.png" alt="Product Image">
+                    </div>
+                    <div class="cart-item-details">
+                        <h4>Product Title</h4>
+                        <p class="price">$49.99</p>
+                        <div class="quantity">
+                            <label for="quantity">Quantity:</label>
+                            <input type="number" value="1" min="1">
+                        </div>
+                        <button class="remove-item">Remove</button>
+                    </div>
+                </div>
+                <!-- Add more cart items as needed -->
+            </div>
+            <div class="cart-summary">
+                <h3>Summary</h3>
+                <p>Total: <span class="total-price">$49.99</span></p>
+                <button class="checkout">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
